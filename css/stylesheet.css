@@ -1,12 +1,34 @@
-/* Das CSS für den Hintergrund der gesamten Website */
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
-    margin: 0rem;
-    overflow: hidden;
-  }
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Änderung von repeat auf no-repeat */
+  background-attachment: fixed;
+  background-color: #000; /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 500px;
+}
+
+.logo {
+  max-height: 100%; 
+  margin-top: 20px; /* Fügt oben einen Abstand von 20px hinzu */
+
+}
+
+
   
   h1 {
     font-family: 'Space Mono', monospace;
@@ -21,7 +43,69 @@ body {
     color: black;
   }
   
-  /* -- YouTube Link Styles -- */
+
+/* Stil für Texteingabefelder und Dropdown-Menüs im Formular */
+.form-container input[type="text"],
+.form-container select {
+    display: block;
+    margin: 10px auto;
+    width: 20px;
+}
+
+/* Stil für Schaltflächen im Formular */
+.form-container button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+/* Stil für das Ergebnisfeld */
+#result {
+    margin-top: 20px;
+}
+
+
+.einleitung {
+    color: #fefefe;
+    font-family: "DM Mono", monospace;
+    text-align: center;
+    margin-bottom: 20px; 
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Stil für das Formular-Container */
+.ageChecker {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  width: 30%;  /* Einstellung auf 30% der Seitenbreite */
+  margin: 0 auto; /* Zentriert den Container horizontal */
+}
+
+.eingabefeld {
+  margin-bottom: 10px;
+}
+
+
+.age {
+    font-family: "Fugaz One", sans-serif;
+    font-size: 128px; /* Neue Schriftgröße für das Alter */
+    font-weight: bold; /* Optional: Setze die Schrift auf fett */
+    color: #efefef; /* Optional: Setze die Schriftfarbe auf rot */  
+    
+}
+
+.teamfoto {
+  width: 200px;
+}
+
+
+
+  /* -- YouTube Link Styles --
   
   body.menu-toggled > .meta-link > span {
     color: rgb(30, 30, 30);
@@ -72,62 +156,6 @@ body {
     color: white;
     font-family: "Rubik", sans-serif;
     font-weight: 500;
-  }
-
-body {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Änderung von repeat auf no-repeat */
-    background-attachment: fixed;
-    background-color: #000; /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* Stil für Texteingabefelder und Dropdown-Menüs im Formular */
-.form-container input[type="text"],
-.form-container select {
-    display: block;
-    margin: 10px auto;
-    width: 200px;
-}
-
-/* Stil für Schaltflächen im Formular */
-.form-container button {
-    margin: 10px auto;
-    padding: 10px 20px;
-    cursor: pointer;
-    flex-direction: column;
-}
-
-/* Stil für das Ergebnisfeld */
-#result {
-    margin-top: 20px;
-}
-
-/* Stil für den Hauptcontainer */
-.container {
-    color: #fefefe;
-    font-family: "DM Mono", monospace;
-    text-align: center;
-    margin-bottom: 20px; /* Falls du eine Marge zwischen dem Fließtext und dem Formular wünschst */
-}
-
-/* Stil für das Formular-Container */
-.form-container {
-    text-align: center;
-    flex-direction: column;
-}
+  } */
 
 
-.age {
-    font-family: "Fugaz One", sans-serif;
-    font-size: 128px; /* Neue Schriftgröße für das Alter */
-    font-weight: bold; /* Optional: Setze die Schrift auf fett */
-    color: #efefef; /* Optional: Setze die Schriftfarbe auf rot */
-}

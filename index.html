@@ -14,30 +14,39 @@
 </head>
 <body>
     <header>
-    <h1 data-value="Betrüger">Willkommen</h1>
+        <div class="logoBox">
+            <img src="images/glitch_logo.gif" alt="Logo" class="logo">
+          </div>
+          
+    <!-- <h1 data-value="Betrüger">Willkommen</h1> -->
     </header>
 
 
     
     <main>
-        <div class="container">
+        <div class="einleitung">
             <p> Entdecken Sie «Check Your Victim» - Ihr effizientes Werkzeug für zielgerichtete, betrügerische Anrufe. Mit unserer Hilfe können Sie das Alter potenzieller Opfer anhand ihres Namens blitzschnell ermitteln. Unser intuitives Interface ermöglicht es Ihnen, schnell und präzise Informationen zu erhalten, um Ihre Anrufe gezielt anzupassen.</p>
+        </div>
     
-            <div class="age-checker">
-                <input type="text" id="name" placeholder="Name eingeben">
-                <select id="country">
-                    <option value="">Ländercode wählen</option>
-                    <option value="US">USA</option>
-                    <option value="DE">Deutschland</option>
-                    <option value="FR">Frankreich</option>
-                    <option value="CH">Schweiz</option>
-                    <option value="GB">Großbritannien</option>
-                    <option value="IN">Indien</option>
-                    <!-- Füge weitere Ländercodes hier ein -->
-                </select>
-                <button onclick="fetchAge()">Scan</button>
-                <div id="result"></div>
-            </div>
+        <div class="ageChecker">
+            <input class="eingabefeld" type="text" id="name" placeholder="Name eingeben">
+            <select class="eingabefeld" id="country">
+                <option value="">Ländercode wählen</option>
+                <option value="US">USA</option>
+                <option value="DE">Deutschland</option>
+                <option value="FR">Frankreich</option>
+                <option value="CH">Schweiz</option>
+                <option value="GB">Großbritannien</option>
+                <option value="IN">Indien</option>
+                <!-- Füge weitere Ländercodes hier ein -->
+            </select>
+            <button class="eingabefeld" onclick="fetchAge()">Scan</button>
+            <div id="result"></div>
+        </div>
+
+        <div class="teamfoto">
+            <img src="images/Teamfoto.jpg" alt="Teamfoto">
+
         </div>
     </main>
 

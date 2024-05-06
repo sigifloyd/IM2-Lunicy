@@ -3,7 +3,7 @@
 /* Das CSS für den Hintergrund der gesamten Website */
 body {
      /* Pfad zum Hintergrundbild anpassen */
-     background-image: url('IM2-Lunicy/images/background.jpg'); 
+     background-image: url("../images/background.jpg");
     
     /* Stelle sicher, dass das Bild den gesamten Bildschirm bedeckt */
     background-size: cover;

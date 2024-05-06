@@ -5,31 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check your victim</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fugaz+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <!-- Du kannst hier Inhalt hinzufügen, falls nötig -->
+    <h1 data-value="Betrüger">Willkommen</h1>
     </header>
 
-    <main>
 
-        <div class="age-checker">
-            <input type="text" id="name" placeholder="Name eingeben">
-            <select id="country">
-                <option value="">Ländercode wählen</option>
-                <option value="US">USA</option>
-                <option value="DE">Deutschland</option>
-                <option value="FR">Frankreich</option>
-                <option value="CH">Schweiz</option>
-                <option value="GB">Großbritannien</option>
-                <option value="IN">Indien</option>
-                <!-- Füge weitere Ländercodes hier ein -->
-            </select>
-            <button onclick="fetchAge()">Scan</button>
-            <div id="result"></div>
+    
+    <main>
+        <div class="container">
+            <p> Entdecken Sie «Check Your Victim» - Ihr effizientes Werkzeug für zielgerichtete, betrügerische Anrufe. Mit unserer Hilfe können Sie das Alter potenzieller Opfer anhand ihres Namens blitzschnell ermitteln. Unser intuitives Interface ermöglicht es Ihnen, schnell und präzise Informationen zu erhalten, um Ihre Anrufe gezielt anzupassen.</p>
+    
+            <div class="age-checker">
+                <input type="text" id="name" placeholder="Name eingeben">
+                <select id="country">
+                    <option value="">Ländercode wählen</option>
+                    <option value="US">USA</option>
+                    <option value="DE">Deutschland</option>
+                    <option value="FR">Frankreich</option>
+                    <option value="CH">Schweiz</option>
+                    <option value="GB">Großbritannien</option>
+                    <option value="IN">Indien</option>
+                    <!-- Füge weitere Ländercodes hier ein -->
+                </select>
+                <button onclick="fetchAge()">Scan</button>
+                <div id="result"></div>
+            </div>
         </div>
     </main>
-    
 
     <footer>
         <!-- Footer-Inhalte nach Bedarf -->

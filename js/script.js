@@ -20,6 +20,11 @@ function fetchAge() {
             if (data.age) {
                 // Verwende <span> tags, um das Alter in einer anderen Schriftart und Größe zu formatieren
                 resultDiv.innerHTML = `Dein Opfer ist mit hoher Wahrscheinlichkeit <span class="age">${data.age}</span> Jahre alt.`;
+                let slider = document.getElementById("myRange");
+                slider.classList.remove("hide-thumb");
+                slider.classList.add("show-thumb");
+                slider.value = data.age;
+
             } else {
                 // Falls keine Daten gefunden wurden, wird eine entsprechende Nachricht angezeigt.
                 resultDiv.innerHTML = "Keine Daten gefunden. Bitte überprüfen Sie die Eingaben.";
@@ -61,3 +66,22 @@ function fetchAge() {
 //     iteration += 1 / 3;
 //   }, 30);
 // }
+
+
+// var slider = document.getElementById("myRange");
+// var output = document.getElementById("result");
+// output.innerHTML = slider.value; // Display the default slider value
+
+// // Update the current slider value (each time you drag the slider handle)
+// slider.oninput = function() {
+//   output.innerHTML = this.value;
+// }
+
+// slider.value = 30;
+
+
+
+
+// const slider = document.getElementById("myRange");
+// const sliderThumb = document.querySelector (".slider: :-webkit-slider-thumb");
+

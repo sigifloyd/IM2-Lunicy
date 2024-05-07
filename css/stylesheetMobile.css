@@ -1,0 +1,153 @@
+:root{
+  --margin-S: 5px;
+  --margin-M: 12px;
+  --margin-L: 40px;
+  --padding-L: 10px;
+  
+  --gap-S: 20px;
+
+  --border-s: 0.2rem solid var(--color-black);
+
+  --color-black: #191919;
+  --color-grey: #EFEFEF;
+  --color-white: #F4F4F4;
+
+} 
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: color: var(--color-grey);
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+h1:hover {
+  background-color: color: var(--color-grey);
+  color: black;
+}
+
+
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Änderung von repeat auf no-repeat */
+    background-attachment: fixed;
+    background-color: color: var(--color-grey); /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+    
+    margin: 0 auto;
+  }
+  
+  .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  
+  }
+  
+  .logo {
+    height: 500px;
+    
+  }
+
+  .fliesstext {
+    display: flex;
+    color: var(--color-grey);
+    font-family: "DM Mono", monospace;
+    text-align: center;
+
+    margin-left: var(--margin-L);
+    margin-right: var(--margin-L);
+    
+}
+  
+
+  
+  /* Stil für das Formular-Container */
+  .ageChecker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .eingabefeld {
+    justify-content: center;
+    
+  }
+  
+  
+  .age {
+      font-family: "Fugaz One", sans-serif;
+      font-size: 128px; /* Neue Schriftgröße für das Alter */
+      font-weight: bold; /* Optional: Setze die Schrift auf fett */
+      color: var(--color-grey);/* Optional: Setze die Schriftfarbe auf rot */  
+      
+  }
+  
+  .teamfoto {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+  
+
+  
+    /* -- YouTube Link Styles --
+    
+    body.menu-toggled > .meta-link > span {
+      color: rgb(30, 30, 30);
+    }
+    
+    #source-link {
+      bottom: 60px;
+    }
+    
+    #source-link > i {
+      color: rgb(94, 106, 210);
+    }
+    
+    #yt-link > i {
+      color: rgb(239, 83, 80);
+    }
+    
+    .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      bottom: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;  
+      display: inline-flex;
+      gap: 5px;
+      left: 10px;
+      padding: 10px 20px;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 400ms, border-color 400ms;
+      z-index: 10000;
+    }
+    
+    .meta-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .meta-link > i, .meta-link > span {
+      height: 20px;
+      line-height: 20px;
+    }
+    
+    .meta-link > span {
+      color: white;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+    } */
+  
+  
+    

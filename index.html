@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check your victim</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheetMobile.css">
+    <link rel="stylesheet" href="css/stylesheetDesktop.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
     
@@ -24,13 +25,17 @@
 
     
     <main>
-        <div class="einleitung">
+        <div class="fliesstext">
             <p> Entdecken Sie «Check Your Victim» - Ihr effizientes Werkzeug für zielgerichtete, betrügerische Anrufe. Mit unserer Hilfe können Sie das Alter potenzieller Opfer anhand ihres Namens blitzschnell ermitteln. Unser intuitives Interface ermöglicht es Ihnen, schnell und präzise Informationen zu erhalten, um Ihre Anrufe gezielt anzupassen.</p>
         </div>
     
         <div class="ageChecker">
-            <input class="eingabefeld" type="text" id="name" placeholder="Name eingeben">
-            <select class="eingabefeld" id="country">
+            <div class="eingabefeld">
+                <input  type="text" id="name" placeholder="Name eingeben">
+            </div>
+
+            <div class="eingabefeld">
+                <select id="country">
                 <option value="">Ländercode wählen</option>
                 <option value="US">USA</option>
                 <option value="DE">Deutschland</option>
@@ -38,20 +43,31 @@
                 <option value="CH">Schweiz</option>
                 <option value="GB">Großbritannien</option>
                 <option value="IN">Indien</option>
-                <!-- Füge weitere Ländercodes hier ein -->
-            </select>
-            <button class="eingabefeld" onclick="fetchAge()">Scan</button>
-            <div id="result"></div>
+                 </select>
+             </div>
+
+             <div class="eingabefeld">
+                <button class="eingabefeld" onclick="fetchAge()">Scan</button>
+            </div>
+
+            <div
+                id="result">
+            </div>
+           
         </div>
 
         <div class="teamfoto">
             <img src="images/Teamfoto.jpg" alt="Teamfoto">
 
         </div>
+
+      
     </main>
 
     <footer>
-        <!-- Footer-Inhalte nach Bedarf -->
+        <div class="fliesstext">
+            <p>Bitte nutzen Sie «Check Your Victim» verantwortungsbewusst und respektvoll. Unsere Plattform dient ausschliesslich zu Demonstrationszwecken und unterstützt keinerlei illegale oder schädliche Aktivitäten.</p>
+        </div>
     </footer>
     
     <script src="js/script.js"></script>

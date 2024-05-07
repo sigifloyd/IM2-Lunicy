@@ -83,6 +83,20 @@ body {
     margin-right: var(--margin-L);
     
 }
+
+.resultatFliesstext {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey);
+  font-family: "DM Mono", monospace;
+  text-align: center;
+
+  margin-left: var(--margin-L);
+  margin-right: var(--margin-L);
+  margin-top: var(--margin-L);
+  margin-bottom: var(--margin-L);
+  
+}
   
 
   
@@ -104,9 +118,10 @@ body {
       font-family: "Fugaz One", sans-serif;
       font-size: 128px; /* Neue Schriftgröße für das Alter */
       font-weight: bold; /* Optional: Setze die Schrift auf fett */
-      color: var(--color-grey);/* Optional: Setze die Schriftfarbe auf rot */  
-      
+      margin-bottom: -30px;
+      margin-top: -20px
   }
+
 
   .slidecontainer {
     width: 100%; /* Width of the outside container */
@@ -127,8 +142,10 @@ body {
   }
   
   #myRange {
-    background: linear-gradient(to right, #ff0000 40%, #ffbb01 60%, #09ff00 100%);
-    /* display: none; */
+    background: linear-gradient(to right, #ff0000 40%, #ffff01 60%, #09ff00 100%);
+    border-radius: 40px;
+    height: 15px;
+    
   }
   /* Mouse-over effects */
   .slider:hover {

@@ -1,9 +1,9 @@
-:root{
+:root {
   --margin-S: 5px;
   --margin-M: 12px;
   --margin-L: 40px;
   --padding-L: 10px;
-  
+
   --gap-S: 20px;
 
   --border-s: 0.2rem solid var(--color-black);
@@ -12,7 +12,7 @@
   --color-grey: #EFEFEF;
   --color-white: #F4F4F4;
 
-} 
+}
 
 h1 {
   font-family: 'Space Mono', monospace;
@@ -28,155 +28,205 @@ h1:hover {
 }
 
 
-
 body {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Änderung von repeat auf no-repeat */
-    background-attachment: fixed;
-    background-color: var(--color-grey); /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
-    width: 100%;
-  }
-  
-  .logoBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  
-    
-    animation-name: moveObject;
-    animation-delay: 2000ms;
-    animation-duration: 2000ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  
-  }
-
-  
-  .logo {
-    width: 100%;
-    
-  }
-
-  @keyframes moveObject {
-    0% {
-      transform: ;
-    }
-
-    100% {
-      transform: scale(0.2);
-    }
-  }
-
- 
-
-  .fliesstext {
-    display: flex;
-    flex-direction: column;
-    color: var(--color-grey);
-    font-family: "DM Mono", monospace;
-    text-align: center;
-
-    margin-left: var(--margin-L);
-    margin-right: var(--margin-L);
-    
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Änderung von repeat auf no-repeat */
+  background-attachment: fixed;
+  background-color: var(--color-grey);
+  /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+  width: 100%;
 }
-  
 
-  
-  /* Stil für das Formular-Container */
-  .ageChecker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
-  }
-  
-  .eingabefeld {
-    justify-content: center;
-    
-  }
-  
-  
-  .age {
-      font-family: "Fugaz One", sans-serif;
-      font-size: 128px; /* Neue Schriftgröße für das Alter */
-      font-weight: bold; /* Optional: Setze die Schrift auf fett */
-      color: var(--color-grey);/* Optional: Setze die Schriftfarbe auf rot */  
-      
-  }
-
-  .slidecontainer {
-    width: 100%; /* Width of the outside container */
-    width: 80%;
-  }
-  
-  /* The slider itself */
-  .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 40px; /* Specified height */
-
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-  }
-  
-  #myRange {
-    background: linear-gradient(to right, #ff0000 40%, #ffbb01 60%, #09ff00 100%);
-    /* display: none; */
-  }
-  /* Mouse-over effects */
-  .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider:not(.hide-thumb)::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 10px; /* Set a specific slider handle width */
-    height: 60px; /* Slider handle height */
-    background: #ffffff; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-
-  .show-thumb::-webkit-slider-thumb {
-    display: block;
-  }
-
-  .hide-thumb::-webkit-slider-thumb {
-    display: none;
-    
 }
 
 
-  .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-  .teamfoto {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    margin-top: var(--margin-L);
+.logo {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 300px;
+
+  animation-name: moveObject;
+  animation-delay: 1500ms;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveObject {
+  0% {
+    /* transform: scale(0); */
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 300px;
+
   }
 
-  .disclaimer {
-    margin-top: var(--margin-L);
-
+  100% {
+    /* transform: scale(0.2); */
+    width: 25%;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
-  
+}
 
+
+
+.fliesstext {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey);
+  font-family: "DM Mono", monospace;
+  text-align: center;
+
+  margin-left: var(--margin-L);
+  margin-right: var(--margin-L);
+
+}
+
+
+
+/* Stil für das Formular-Container */
+.ageChecker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.eingabefeld {
+  justify-content: center;
+
+}
+
+
+.age {
+  font-family: "Fugaz One", sans-serif;
+  font-size: 128px;
+  /* Neue Schriftgröße für das Alter */
+  font-weight: bold;
+  /* Optional: Setze die Schrift auf fett */
+  color: var(--color-grey);
+  /* Optional: Setze die Schriftfarbe auf rot */
+
+}
+
+.resultatFliesstext {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey);
+  font-family: "DM Mono", monospace;
+  text-align: center;
+
+  margin-left: var(--margin-L);
+  margin-right: var(--margin-L);
+  margin-top: var(--margin-L);
+  margin-bottom: var(--margin-L);
   
-    /* -- YouTube Link Styles --
+}
+
+.slidecontainer {
+  margin-top: var(--margin-L);
+width: 80%;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 40px;
+  /* Specified height */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+#myRange {
+  background: linear-gradient(to right, #ff0000 40%, #ffbb01 60%, #09ff00 100%);
+  /* display: none; */
+  border-radius: 20px;
+  height: 15px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider:not(.hide-thumb)::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 5px;
+  /* Set a specific slider handle width */
+  height: 60px;
+  /* Slider handle height */
+  background: #ffffff;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.show-thumb::-webkit-slider-thumb {
+  display: block;
+}
+
+.hide-thumb::-webkit-slider-thumb {
+  display: none;
+
+}
+
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.teamfotoBox {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--margin-L);
+  height: 200px;
+  width: 100%;
+}
+
+.bild {
+  width: 80%;
+  align-self: center;
+}
+
+
+.disclaimer {
+  margin-top: var(--margin-L);
+
+}
+
+
+
+/* -- YouTube Link Styles --
     
     body.menu-toggled > .meta-link > span {
       color: rgb(30, 30, 30);
@@ -228,57 +278,4 @@ body {
       font-family: "Rubik", sans-serif;
       font-weight: 500;
     } */
-  
-    .slidecontainer {
-      width: 100%; /* Width of the outside container */
-    }
-    
-    /* The slider itself */
-    .slider {
-      -webkit-appearance: none;  /* Override default CSS styles */
-      appearance: none;
-      width: 100%; /* Full-width */
-      height: 40px; /* Specified height */
 
-      outline: none; /* Remove outline */
-      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-      transition: opacity .2s;
-    }
-    
-    #myRange {
-      background: linear-gradient(to right, #ff0000 40%, #ffbb01 60%, #09ff00 100%);
-      /* display: none; */
-    }
-    /* Mouse-over effects */
-    .slider:hover {
-      opacity: 1; /* Fully shown on mouse-over */
-    }
-    
-    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-    .slider:not(.hide-thumb)::-webkit-slider-thumb {
-      -webkit-appearance: none; /* Override default look */
-      appearance: none;
-      width: 10px; /* Set a specific slider handle width */
-      height: 60px; /* Slider handle height */
-      background: #ffffff; /* Green background */
-      cursor: pointer; /* Cursor on hover */
-    }
-
-    .show-thumb::-webkit-slider-thumb {
-      display: block;
-    }
-
-    .hide-thumb::-webkit-slider-thumb {
-      display: none;
-      
-  }
-
-
-    .slider::-moz-range-thumb {
-      width: 25px; /* Set a specific slider handle width */
-      height: 25px; /* Slider handle height */
-      background: #04AA6D; /* Green background */
-      cursor: pointer; /* Cursor on hover */
-    }
-    

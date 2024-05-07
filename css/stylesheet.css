@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Das CSS für den Hintergrund der gesamten Website */
+body {
+     background-image: url("../images/background.jpg");
+    
+     background-size: cover;
+    
+    background-position: center;
+    
+    background-repeat: repeat;
+    
+    background-attachment: fixed;
+    
+    /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+    background-color: #000; 
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    text-align: center;
+}
+
+input[type="text"] {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.Fliesstext {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #EFEFEF;
+    font-family: 'DM Mono', monospace;
+}
+
+

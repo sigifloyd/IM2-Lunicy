@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 Hallo Test
 # IM2-Lunicy
-=======
 # IM2-Lunicy
 
 
@@ -19,4 +17,3 @@ Formatierung: https://docs.github.com/de/get-started/writing-on-github/getting-s
 # A Schwierigkeiten
 
 # A benutzte Ressourcen
->>>>>>> 39a7033c6256742305fe99e9af2ecb880a301a26

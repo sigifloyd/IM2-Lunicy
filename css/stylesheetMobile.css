@@ -16,15 +16,26 @@
 
 h1 {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(3rem, 10vw, 10rem);
+  font-size: 3rem;
+  
   color: var(--color-grey);
-  padding: 0rem clamp(1rem, 2vw, 3rem);
-  border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
 
-h1:hover {
-  background-color: var(--color-grey);
-  color: black;
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  color: var(--color-grey);
+  
+
+} 
+
+p {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-grey);
+  font-family: "DM Mono", monospace;
+  text-align: center;
+
 }
 
 
@@ -38,7 +49,11 @@ body {
   background-color: var(--color-grey);
   /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
   width: 100%;
+  text-align: center;
 }
+
+
+
 
 .logoBox {
   display: flex;
@@ -80,20 +95,6 @@ body {
 
 
 
-.fliesstext {
-  display: flex;
-  flex-direction: column;
-  color: var(--color-grey);
-  font-family: "DM Mono", monospace;
-  text-align: center;
-
-  margin-left: var(--margin-L);
-  margin-right: var(--margin-L);
-
-}
-
-
-
 /* Stil für das Formular-Container */
 .ageChecker {
   display: flex;
@@ -105,6 +106,32 @@ body {
 .eingabefeld {
   justify-content: center;
 
+}
+
+
+.eingabefeld input[type="text"], .eingabefeld select {
+    width: 100%; /* 100% Breite */
+    padding: 15px; /* Innenabstand */
+    font-size: 16px; /* Schriftgröße */
+    border-radius: 30px; /* Abgerundete Ecken */
+    border: 1px solid #ccc; /* Rand */
+    box-sizing: border-box; /* Box-Modell */
+    margin-bottom: 10px; /* Abstand nach unten */
+}
+
+.eingabefeld button {
+  padding: 10px 20px; /* Innenabstand */
+  font-size: 16px; /* Schriftgröße */
+  border-radius: 30px; /* Abgerundete Ecken */
+  border: none; /* Kein Rand */
+  background-color: #FF4343; /* Hintergrundfarbe */
+  color: #fff; /* Textfarbe */
+  cursor: pointer; /* Zeigercursor */
+
+}
+
+.eingabefeld button:hover {
+  background-color: #f54141; /* Hintergrundfarbe */
 }
 
 
@@ -134,8 +161,10 @@ body {
 }
 
 .slidecontainer {
-  margin-top: var(--margin-L);
-width: 80%;
+  margin-top: var(--margin-M);
+  margin-bottom: 100px;
+  width: 80%;
+
 }
 
 /* The slider itself */
@@ -207,22 +236,33 @@ width: 80%;
 
 .teamfotoBox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: var(--margin-L);
   height: 200px;
   width: 100%;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .bild {
   width: 80%;
   align-self: center;
+
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
 
 .disclaimer {
-  margin-top: var(--margin-L);
-
+  align-self: center;
+  width: 80%;
 }
+
 
 
 

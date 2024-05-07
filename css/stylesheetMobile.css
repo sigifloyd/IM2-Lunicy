@@ -17,13 +17,13 @@
 h1 {
   font-family: 'Space Mono', monospace;
   font-size: clamp(3rem, 10vw, 10rem);
-  color: color: var(--color-grey);
+  color: var(--color-grey);
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
 
 h1:hover {
-  background-color: color: var(--color-grey);
+  background-color: var(--color-grey);
   color: black;
 }
 
@@ -35,26 +35,46 @@ body {
     background-position: center;
     background-repeat: no-repeat; /* Änderung von repeat auf no-repeat */
     background-attachment: fixed;
-    background-color: color: var(--color-grey); /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
-    
-    margin: 0 auto;
+    background-color: var(--color-grey); /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+    width: 100%;
   }
   
   .logoBox {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    width: 100%;
+  
+    
+    animation-name: moveObject;
+    animation-delay: 2000ms;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   
   }
+
   
   .logo {
-    height: 500px;
+    width: 100%;
     
   }
 
+  @keyframes moveObject {
+    0% {
+      transform: ;
+    }
+
+    100% {
+      transform: scale(0.2);
+    }
+  }
+
+ 
+
   .fliesstext {
     display: flex;
+    flex-direction: column;
     color: var(--color-grey);
     font-family: "DM Mono", monospace;
     text-align: center;
@@ -87,11 +107,71 @@ body {
       color: var(--color-grey);/* Optional: Setze die Schriftfarbe auf rot */  
       
   }
+
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+    width: 80%;
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 40px; /* Specified height */
+
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  #myRange {
+    background: linear-gradient(to right, #ff0000 40%, #ffbb01 60%, #09ff00 100%);
+    /* display: none; */
+  }
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider:not(.hide-thumb)::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 60px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .show-thumb::-webkit-slider-thumb {
+    display: block;
+  }
+
+  .hide-thumb::-webkit-slider-thumb {
+    display: none;
+    
+}
+
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
   
   .teamfoto {
     display: flex;
     justify-content: center;
     height: 200px;
+    margin-top: var(--margin-L);
+  }
+
+  .disclaimer {
+    margin-top: var(--margin-L);
+
   }
   
 

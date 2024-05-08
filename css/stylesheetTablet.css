@@ -1,6 +1,7 @@
 @media only screen and (min-width: 600px) {
 
-    .logo {
+ /*Anpassung der Animation auf Tablet grösse*/   
+.logo-animated {
         width: 70%;
         margin-top: 100px;
         margin-bottom: 300px;
@@ -35,7 +36,9 @@
         font-size: 1.2rem;
     }
 
-   
+    .fliesstextZusatz {
+        margin-top: 4%;
+      }
       
 
     .slidecontainer {

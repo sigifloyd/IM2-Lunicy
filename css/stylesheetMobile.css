@@ -4,16 +4,11 @@
   padding: 0;
 }
 
-
+/* Grundeinstellungen von Abständen, Farben, Schrifen*/
 :root {
   --margin-S: 5px;
   --margin-M: 12px;
-  --margin-L: 40px;
-  --padding-L: 10px;
-
-  --gap-S: 20px;
-
-  --border-s: 0.2rem solid var(--color-black);
+  --margin-L: 40px;;
 
   --color-black: #000000;
   --color-grey: #EFEFEF;
@@ -39,7 +34,6 @@ h2 {
 }
 
 
-
 p {
   flex-direction: column;
   color: var(--color-grey);
@@ -49,6 +43,8 @@ p {
   
 }
 
+
+/* Animation das Logos, erscheint gross uns wir nur 1x wiederholt */
 .logo-animated {
   width: 100%;
   margin-top: 120px;
@@ -92,6 +88,7 @@ p {
 
 }
 
+/*Hintergrundbild und trennung von Footer und Body (damit margin =0 im Footer) mittels class="bodyChild"*/
 body  {
   background-image: url("../images/background.jpg");
   background-size: cover;
@@ -113,7 +110,7 @@ body  {
   margin-right: 10%;
 }
 
-
+/*Felxbox wird definiert*/
 .main {
   display: flex;
   flex-direction: column;
@@ -123,6 +120,10 @@ body  {
 }
 
 .fliesstext {
+  margin-top: 5%;
+}
+
+.fliesstextZusatz {
   margin-top: 5%;
 }
 
@@ -198,50 +199,36 @@ body  {
 
 }
 
-/* The slider itself */
+/* Aussehen des Sliders*/
 .slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   appearance: none;
   width: 100%;
-  /* Full-width */
   height: 40px;
-  /* Specified height */
   outline: none;
-  /* Remove outline */
   opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s;
-  /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
 
 #myRange {
   background: linear-gradient(to right, #ff0000 20%, #ffbb01 60%, #09ff00 100%);
-  /* display: none; */
   border-radius: 20px;
   height: 15px;
 }
 
-/* Mouse-over effects */
+/* Mouse-over effect */
 .slider:hover {
   opacity: 1;
-  /* Fully shown on mouse-over */
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider:not(.hide-thumb)::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
   width: 5px;
-  /* Set a specific slider handle width */
   height: 60px;
-  /* Slider handle height */
-  background: #ffffff;
-  /* Green background */
+  background: var(--color-white);
   cursor: pointer;
-  /* Cursor on hover */
 }
 
 .show-thumb::-webkit-slider-thumb {
@@ -252,7 +239,6 @@ body  {
   display: none;
 
 }
-
 
 .slider::-moz-range-thumb {
   width: 25px;
@@ -265,15 +251,13 @@ body  {
   /* Cursor on hover */
 }
 
-
+/*ab hier wird der Inhalt als Footer wahrgenommen. Alle inhalte befinden sich ausserhalb des class="bodyChild"*/
 .bild {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 
 }
-
-
 
 .footer {
   display: flex;

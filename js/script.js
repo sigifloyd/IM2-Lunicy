@@ -1,9 +1,7 @@
 // Überprüfen, ob der Benutzer die Seite bereits besucht hat
 if (!localStorage.getItem('visited')) {
-    // Wenn nicht, füge den Eintrag 'visited' im Local Storage hinzu
     localStorage.setItem('visited', true);
 
-    // Führe die Animation aus
     animateLogo(false);
 } else {
     localStorage.setItem('visited', true);
@@ -15,7 +13,6 @@ function animateLogo(status) {
 
     if (status == true) {
 
-        // Wenn die Seite bereits besucht wurde, wird die Animation nicht ausgeführt
         console.log('Die Logo-Animation wird nicht ausgeführt.');
         document.querySelector('.logo-hook').classList.remove('logo-animated');
         document.querySelector('.logo-hook').classList.add('logo-small');
@@ -30,10 +27,15 @@ function animateLogo(status) {
 
 }
 
-document.getElementById('scrollButton').addEventListener('click', function() {
+//Wenn auf Scan gedrückt wird scrollt die Seite automatisch zum festgelegten scrollTarget. Dadruch verpasst der User die Animation nicht.
+document.getElementById('scrollButton').addEventListener('click', function () {
     document.getElementById('scrollTarget').scrollIntoView({ behavior: 'smooth' });
 });
 
+
+//API wird abegrufen, der eingegeben Name wird in der Datenbank abgeglichen
+//Je nach Alter bewegt sich der Regler zwischen Position 0 und 100
+//Je nach Alter wird eine andere Farbe angezeigt. Dies wird mit if/else Bedinungen gelöst.
 function fetchAge() {
     const name = document.getElementById('name').value;
     const country = document.getElementById('country').value;
@@ -51,9 +53,9 @@ function fetchAge() {
                 slider.value = data.age;
                 animateAge(resultDiv, parseInt(data.age));
 
-                // Hier wird der Code zur Farbänderung basierend auf dem Alter platziert
+                
                 var ageElement = document.querySelector('.age');
-                var age = parseInt(data.age); // Verwenden Sie das Alter aus der API-Antwort
+                var age = parseInt(data.age);
                 if (age < 40) {
                     ageElement.style.color = '#ff0000';
                 } else if (age >= 41 && age <= 59) {
@@ -72,28 +74,16 @@ function fetchAge() {
 }
 
 
-
+//Animation um das per API abgefragte Alter darzustellen. 
 function animateAge(resultDiv, targetAge) {
-    // Beginne mit 0
     let currentAge = 0;
-
-    // Setze die Intervalldauer (in Millisekunden) zwischen den Schritten
-    const intervalDuration = 30; // Zum Beispiel 50ms
-
-    // Berechne die Schritte, die benötigt werden, um das Zielalter zu erreichen
-    const totalSteps = Math.ceil(targetAge / 10); // Zum Beispiel: wenn targetAge 45 ist, dann wären es 5 Schritte
-
-    // Erstelle das Intervall, um die Animation zu steuern
+    const intervalDuration = 30;
+    const totalSteps = Math.ceil(targetAge / 10);
     const animationInterval = setInterval(() => {
-        // Inkrementiere das aktuelle Alter um 1 Schritt
         currentAge++;
-
-        // Aktualisiere den Text im Ergebnis-Div mit dem aktuellen Alter
         resultDiv.innerHTML = `Dein Opfer ist mit hoher Wahrscheinlichkeit <span class="age">${currentAge}</span> Jahre alt.`;
 
         applyColor(currentAge);
-
-        // Beende die Animation, wenn das Zielalter erreicht ist
         if (currentAge >= targetAge) {
             clearInterval(animationInterval);
         }

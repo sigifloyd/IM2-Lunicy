@@ -1,3 +1,28 @@
+// Überprüfen, ob der Benutzer die Seite bereits besucht hat
+if (!localStorage.getItem('visited')) {
+    // Wenn nicht, füge den Eintrag 'visited' im Local Storage hinzu
+    localStorage.setItem('visited', false);
+
+    // Führe die Animation aus
+    animateLogo();
+} else {
+    localStorage.setItem('visited', true);
+    // Andernfalls wurde die Seite bereits besucht, die Animation wird nicht erneut ausgeführt
+    console.log('Die Seite wurde bereits besucht.');
+}
+
+function animateLogo() {
+    const logo = document.querySelector('.moveObject');
+
+    // // Fügen Sie Ihre Animationslogik hier ein
+    // logo.style.animationName = 'moveObject';
+    // logo.style.animationDelay = '1500ms';
+    // logo.style.animationDuration = '1500ms';
+    // logo.style.animationIterationCount = '1';
+    // logo.style.animationFillMode = 'forwards';
+}
+
+
 function fetchAge() {
     const name = document.getElementById('name').value;
     const country = document.getElementById('country').value;

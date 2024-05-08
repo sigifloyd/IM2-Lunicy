@@ -18,74 +18,78 @@
 </head>
 
 <body>
-    <header>
-        <div class="logoBox">
-            <img src="images/glitch_logo.gif" alt="Logo" class="logo-hook logo-animated">
-        </div>
+    <div class="bodyChild">
+        <header>
+            <div class="logoBox">
+                <img src="images/glitch_logo.gif" alt="Logo" class="logo-hook logo-animated">
+            </div>
+        </header>
 
-   
-    </header>
 
-
-    <main>
-        <div class="fliesstext">
-            <h1>Entdecken Sie "Check Your Victim"</h1>
-            <h3> Ihr effizientes Werkzeug für zielgerichtete, betrügerische Anrufe.
-                Mit unserer Hilfe können Sie das Alter potenzieller Opfer anhand ihres Namens blitzschnell ermitteln.
-                Unser intuitives Interface ermöglicht es Ihnen, schnell und präzise Informationen zu erhalten, um Ihre
-                Anrufe gezielt anzupassen.</h3>
-        </div>
-
-        <div class="ageChecker">
-            <div class="eingabefeld">
-                <input type="text" id="name" placeholder="Name eingeben">
+        <main>
+            <div class="fliesstext" >
+                <h1>Entdecken Sie Check Your Victim</h1>
+                <p> Ihr effizientes Werkzeug für zielgerichtete, betrügerische Anrufe.
+                    Mit unserer Hilfe können Sie das Alter potenzieller Opfer anhand ihres Namens blitzschnell
+                    ermitteln.
+                    <br><br/>
+                    Unser intuitives Interface ermöglicht es Ihnen, schnell und präzise Informationen zu erhalten, um
+                    Ihre
+                    Anrufe gezielt anzupassen.
+                </p>
+                <div id="scrollTarget"></div>
             </div>
 
-            <div class="eingabefeld">
-                <select id="country">
-                    <option value="">Land wählen</option>
-                    <option value="US">USA</option>
-                    <option value="DE">Deutschland</option>
-                    <option value="FR">Frankreich</option>
-                    <option value="CH">Schweiz</option>
-                    <option value="GB">Grossbritannien</option>
-                    <option value="IN">Indien</option>
+            <div class="ageChecker">
+                <div class="eingabefeld">
+                    <input type="text" id="name" placeholder="Name eingeben">
+                </div>
 
-                </select>
+                <div class="eingabefeld">
+                    <select id="country">
+                        <option value="">Land wählen</option>
+                        <option value="US">USA</option>
+                        <option value="DE">Deutschland</option>
+                        <option value="FR">Frankreich</option>
+                        <option value="CH">Schweiz</option>
+                        <option value="GB">Grossbritannien</option>
+                        <option value="IN">Indien</option>
+                        <option value="MC">Monaco</option>
+                        <option value="br">Brasilien</option>
+                        <option value="JP">Japan</option>
+
+                    </select>
+                </div>
+
+                <div class="eingabefeld">
+                    <button class="eingabefeld" id="scrollButton" onclick="fetchAge()">Scannen</button>
+                </div>
+
+                <div id="result" class="resultatFliesstext">
+                </div>
+
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="1" class="slider hide-thumb" id="myRange" disabled>
+                </div>
+
             </div>
 
-            <div class="eingabefeld">
-                <button class="eingabefeld" onclick="fetchAge()">Scannen</button>
-            </div>
 
-            <div
-                id="result" class="resultatFliesstext">
-            </div>
-
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="1" class="slider hide-thumb" id="myRange" disabled>
-            </div>
-
-        </div>
-        
-        <H2>Das Team hinter der Idee</H2>
-        <div class="teamfotoBox">
-            
-        
-            <img src="images/Teamfoto_transparent.png" alt="Teamfoto" class="bild">
-        </div>
-
-
-    </main>
-
+        </main>
+    </div>
     <footer>
+     
         <div class="disclaimer">
-            <p>Bitte nutzen Sie «Check Your Victim» verantwortungsbewusst und respektvoll. Unsere Plattform dient
+           
+            <H2 class="footerText">Das Team hinter der Idee</H2>
+            <img src="images/Teamfoto_transparent.png" alt="Teamfoto" class="bild">
+            <p class="footerText">Bitte nutzen Sie «Check Your Victim» verantwortungsbewusst und respektvoll. Unsere Plattform dient
                 ausschliesslich zu Demonstrationszwecken und unterstützt keinerlei illegale oder schädliche Aktivitäten.
             </p>
-            <p>Interaktive Medien 2 by Team LUNICY <br> Bern 2024</p>
-        
+            <p class="autorIn">Interaktive Medien 2 by Team LUNICY <br> Bern 2024</p>
+
         </div>
+
     </footer>
 
     <script src="js/script.js"></script>

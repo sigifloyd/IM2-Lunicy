@@ -30,7 +30,9 @@ function animateLogo(status) {
 
 }
 
-
+document.getElementById('scrollButton').addEventListener('click', function() {
+    document.getElementById('scrollTarget').scrollIntoView({ behavior: 'smooth' });
+});
 
 function fetchAge() {
     const name = document.getElementById('name').value;

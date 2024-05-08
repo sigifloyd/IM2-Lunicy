@@ -19,6 +19,44 @@
     }
   }
 
+  
 
+  h1 
+  {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+ 
+
+  .fliesstext {
+    margin-top: 3%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+   
+
+  }
+
+
+  .ageChecker {
+    margin-top: 6%;
+  }
+
+
+  .slidecontainer {
+    margin-bottom: 10%;
+    
+  }
+
+.footerText {
+  width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+   
+}
 
 }

@@ -22,5 +22,41 @@
         }
     }
 
+    h1 {
+       
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
    
+      
+
+    .slidecontainer {
+        margin-top: 7%;
+        margin-bottom: 20%;
+        width: 80%;
+      
+      }
+
+      .bild {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+      
+      }
+
+      .footerText {
+        margin-top: 2%;
+      }
+
+
+    
+      
 }

@@ -1,26 +1,35 @@
 // Überprüfen, ob der Benutzer die Seite bereits besucht hat
 if (!localStorage.getItem('visited')) {
     // Wenn nicht, füge den Eintrag 'visited' im Local Storage hinzu
-    localStorage.setItem('visited', false);
+    localStorage.setItem('visited', true);
 
     // Führe die Animation aus
-    animateLogo();
+    animateLogo(false);
 } else {
     localStorage.setItem('visited', true);
-    // Andernfalls wurde die Seite bereits besucht, die Animation wird nicht erneut ausgeführt
-    console.log('Die Seite wurde bereits besucht.');
+    animateLogo(true);
+
 }
 
-function animateLogo() {
-    const logo = document.querySelector('.moveObject');
+function animateLogo(status) {
 
-    // // Fügen Sie Ihre Animationslogik hier ein
-    // logo.style.animationName = 'moveObject';
-    // logo.style.animationDelay = '1500ms';
-    // logo.style.animationDuration = '1500ms';
-    // logo.style.animationIterationCount = '1';
-    // logo.style.animationFillMode = 'forwards';
+    if (status == true) {
+
+        // Wenn die Seite bereits besucht wurde, wird die Animation nicht ausgeführt
+        console.log('Die Logo-Animation wird nicht ausgeführt.');
+        document.querySelector('.logo-hook').classList.remove('logo-animated');
+        document.querySelector('.logo-hook').classList.add('logo-small');
+
+    } else {
+
+        console.log('Logo-Animation wird ausgeführt.');
+
+
+    }
+
+
 }
+
 
 
 function fetchAge() {
@@ -38,6 +47,7 @@ function fetchAge() {
                 slider.classList.remove("hide-thumb");
                 slider.classList.add("show-thumb");
                 slider.value = data.age;
+                animateAge(resultDiv, parseInt(data.age));
 
                 // Hier wird der Code zur Farbänderung basierend auf dem Alter platziert
                 var ageElement = document.querySelector('.age');
@@ -60,47 +70,54 @@ function fetchAge() {
 }
 
 
-// const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-// let interval = null;
+function animateAge(resultDiv, targetAge) {
+    // Beginne mit 0
+    let currentAge = 0;
 
-// document.querySelector("h1").onmouseover = event => {  
-//   let iteration = 0;
-  
-//   clearInterval(interval);
-  
-//   interval = setInterval(() => {
-//     event.target.innerText = event.target.innerText
-//       .split("")
-//       .map((letter, index) => {
-//         if(index < iteration) {
-//           return event.target.dataset.value[index];
-//         }
-      
-//         return letters[Math.floor(Math.random() * 26)]
-//       })
-//       .join("");
-    
-//     if(iteration >= event.target.dataset.value.length){ 
-//       clearInterval(interval);
-//     }
-    
-//     iteration += 1 / 3;
-//   }, 30);
-// }
+    // Setze die Intervalldauer (in Millisekunden) zwischen den Schritten
+    const intervalDuration = 30; // Zum Beispiel 50ms
 
-// var slider = document.getElementById("myRange");
-// var output = document.getElementById("result");
-// output.innerHTML = slider.value; // Display the default slider value
+    // Berechne die Schritte, die benötigt werden, um das Zielalter zu erreichen
+    const totalSteps = Math.ceil(targetAge / 10); // Zum Beispiel: wenn targetAge 45 ist, dann wären es 5 Schritte
 
-// // Update the current slider value (each time you drag the slider handle)
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-// }
+    // Erstelle das Intervall, um die Animation zu steuern
+    const animationInterval = setInterval(() => {
+        // Inkrementiere das aktuelle Alter um 1 Schritt
+        currentAge++;
 
-// slider.value = 30;
+        // Aktualisiere den Text im Ergebnis-Div mit dem aktuellen Alter
+        resultDiv.innerHTML = `Dein Opfer ist mit hoher Wahrscheinlichkeit <span class="age">${currentAge}</span> Jahre alt.`;
+
+        applyColor(currentAge);
+
+        // Beende die Animation, wenn das Zielalter erreicht ist
+        if (currentAge >= targetAge) {
+            clearInterval(animationInterval);
+        }
+    }, intervalDuration);
+
+    function applyColor(age) {
+        var ageElement = resultDiv.querySelector('.age');
+        if (age < 40) {
+            ageElement.style.color = '#ff0000';
+        } else if (age >= 41 && age <= 59) {
+            ageElement.style.color = '#ffff01';
+        } else {
+            ageElement.style.color = '#09ff00';
+        }
+    }
+}
 
 
-// const slider = document.getElementById("myRange");
-// const sliderThumb = document.querySelector (".slider: :-webkit-slider-thumb");
+
+
+
+
+
+
+
+
+
+
 

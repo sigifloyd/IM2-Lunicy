@@ -8,7 +8,7 @@
 
   --border-s: 0.2rem solid var(--color-black);
 
-  --color-black: #191919;
+  --color-black: #000000;
   --color-grey: #EFEFEF;
   --color-white: #F4F4F4;
 
@@ -16,14 +16,14 @@
 
 h1 {
   font-family: 'Space Mono', monospace;
-  font-size: 3rem;
+  font-size: 2rem;
   
   color: var(--color-grey);
 }
 
 h2 {
   font-family: 'Space Mono', monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-grey);
 
   
@@ -61,10 +61,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Änderung von repeat auf no-repeat */
   background-attachment: fixed;
   background-color: var(--color-grey);
-  /* Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
+  /*Farbe, die angezeigt wird, falls das Bild nicht geladen werden kann */
   width: 100%;
   text-align: center;
   margin: 0;
@@ -84,7 +83,7 @@ body {
 }
 
 
-.logo {
+.logo-animated {
   width: 100%;
   margin-top: 120px;
   margin-bottom: 300px;
@@ -94,6 +93,12 @@ body {
   animation-duration: 1500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.logo-small{
+  width: 25%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @keyframes moveObject {
@@ -265,7 +270,6 @@ body {
 .bild {
   width: 80%;
   align-self: center;
-
 }
 
 .footer {
@@ -274,74 +278,16 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
- 
-  
 }
-
-
 
 .disclaimer {
   justify-content: center;
   align-self: center;
-  width: 100%;
-  background-color: var(--color-black);
+  align-content: end;
   margin-bottom: 0px;
+  padding: var(--margin-S);
+  background: linear-gradient(to top, black 66%, transparent 100%);
+  /* Höhe für besseren Effekt anpassen */
+  min-height: 100px;
  
 }
-
-
-
-
-/* -- YouTube Link Styles --
-    
-    body.menu-toggled > .meta-link > span {
-      color: rgb(30, 30, 30);
-    }
-    
-    #source-link {
-      bottom: 60px;
-    }
-    
-    #source-link > i {
-      color: rgb(94, 106, 210);
-    }
-    
-    #yt-link > i {
-      color: rgb(239, 83, 80);
-    }
-    
-    .meta-link {
-      align-items: center;
-      backdrop-filter: blur(3px);
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      bottom: 10px;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-      cursor: pointer;  
-      display: inline-flex;
-      gap: 5px;
-      left: 10px;
-      padding: 10px 20px;
-      position: fixed;
-      text-decoration: none;
-      transition: background-color 400ms, border-color 400ms;
-      z-index: 10000;
-    }
-    
-    .meta-link:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .meta-link > i, .meta-link > span {
-      height: 20px;
-      line-height: 20px;
-    }
-    
-    .meta-link > span {
-      color: white;
-      font-family: "Rubik", sans-serif;
-      font-weight: 500;
-    } */
-
